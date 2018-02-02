@@ -20,7 +20,7 @@ const puppeteer = require('puppeteer');
     let name = await page.$('input[name=username]')
     let password = await page.$('input[name=password]')
     await name.type('zhangzheng@umbrella.com');
-    await password.type('ci@admin');
+    await password.type('f36da96e00ee5c124b6a27d6d0e9a1f9');
 
     const inputElement = await page.$('button[type=button]');
     await inputElement.click();
