@@ -16,7 +16,7 @@ const baseUrl = 'http://new-resthub.qianbao.com/';
     	width: 1920,
     	height: 1080
     })
-    await page.goto(baseUrl);
+    await page.goto(baseUrl, {waitUntil: 'networkidle2'});
     await page.waitFor('input[name=username]')
     await page.waitFor('input[name=password]')
     let name = await page.$('input[name=username]')
