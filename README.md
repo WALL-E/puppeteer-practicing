@@ -1,3 +1,3 @@
-# Resthub Console Puppeteer
+# Puppeteer Practicing
 
-Web集成测试方案
+实践积累

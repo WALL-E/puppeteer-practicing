@@ -18,10 +18,11 @@ const devices = require('puppeteer/DeviceDescriptors');
         height: 1080
     })
     //await page.emulate(devices['iPhone 6']);
-    await page.goto('https://www.jd.com/');
+    await page.goto('https://www.github.com/');
     page.evaluate(_ => {
         window.scrollBy(0, window.innerHeight);
     });
-    await page.screenshot({path: 'full.png', fullPage: true});
-    //await browser.close();
+    await page.screenshot({path: 'github.png', fullPage: true});
+    await browser.close();
+    console.log("open github.png")
 })();
