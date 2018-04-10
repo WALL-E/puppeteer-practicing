@@ -23,7 +23,8 @@ const puppeteer = require('puppeteer');
   //await page.goto('https://item.jd.com/4585499.html#crumb-wrap')
   await page.goto('https://item.jd.com/11453287793.html')
 
-  const price = await page.evaluate(() => document.querySelector('span.p-price span.price').innerText)
+  //const price = await page.evaluate(() => document.querySelector('span.p-price span.price').innerText)
+  const price = await page.$eval('span.p-price span.price', span => span.innerText)
   console.log(price)
   await browser.close()
 })()
